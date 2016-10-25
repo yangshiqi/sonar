@@ -24,7 +24,7 @@ function runScanner($projectDir) {
 }
 
 function makeSonarFile($baseDir, $type, $name, $ver) {
-	$string = file($baseDir.'sonar-project.properties');
+	$string = file(__DIR__.'/sonar-project.properties');
 	$patterns = array();
 	$patterns[0] = '/#projectKey#/';
 	$patterns[1] = '/#projectName#/';
